@@ -48,17 +48,39 @@
             </ul>
         </div>
         <div class="randomImg">
-            <img src="http://source.unsplash.com/random/900x250" alt="Random Image">
+            <img id="myImg" src="http://source.unsplash.com/random/900x250" alt="Random Image">
         </div>
         <div class="btnGroup">
-            <button>Turn Text Red</button>
-            <button>Hide Image</button>
+            <button id="activateRedText">Turn Text Red</button>
+            <button id="hideImgBtn">Hide Image</button>
             <button>Say Hi</button>
         </div>
         <div class="changeHeader">
             <input type="text" placeholder="Change Title" />
         </div>
     </div>
+
+    <script type="text/javascript">
+
+        //Variable Declaration
+        const redTextBtn = document.getElementById('activateRedText');
+        const hideImgBtn = document.getElementById('hideImgBtn');
+
+        //Event Handlers
+        redTextBtn.onclick = turnTextRed;
+        hideImgBtn.onclick = hideImg;
+
+
+        //Function Declarations
+        function turnTextRed() {
+            document.body.style.color = "red";
+        }
+
+        function hideImg() {
+            document.getElementById('myImg').style.display = "none";
+        }
+    </script>
+
 </body>
 
 </html>
