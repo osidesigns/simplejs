@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <h1>Steven Andrews</h1>
+        <h1 id="titleArea">Steven Andrews</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam non quia dolore debitis commodi quas
             consequatur, eos porro, possimus soluta sunt iste unde quidem nostrum quos assumenda voluptates. Aperiam
             deleniti minus quam eaque, assumenda atque reiciendis velit in cumque, accusantium numquam repellat? Quaerat
@@ -53,10 +53,10 @@
         <div class="btnGroup">
             <button id="activateRedText">Turn Text Red</button>
             <button id="hideImgBtn">Hide Image</button>
-            <button>Say Hi</button>
+            <button id="sayHiBtn">Say Hi</button>
         </div>
         <div class="changeHeader">
-            <input type="text" placeholder="Change Title" />
+            <input type="text" id="titleInputData" placeholder="Change Title" />
         </div>
     </div>
 
@@ -65,10 +65,12 @@
         //Variable Declaration
         const redTextBtn = document.getElementById('activateRedText');
         const hideImgBtn = document.getElementById('hideImgBtn');
+        const sayHiBtn = document.getElementById('sayHiBtn');
 
         //Event Handlers
         redTextBtn.onclick = turnTextRed;
         hideImgBtn.onclick = hideImg;
+        sayHiBtn.onclick = sayHi;
 
 
         //Function Declarations
@@ -79,7 +81,12 @@
         function hideImg() {
             document.getElementById('myImg').style.display = "none";
         }
+
+        function sayHi() {
+            alert('Hi There!');
+        }
     </script>
+    <script src="js/jsscript.js"></script>
 
 </body>
 
